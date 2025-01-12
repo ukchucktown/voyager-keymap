@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include "features/achordion.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
 
@@ -81,6 +82,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // https://getreuer.info/posts/keyboards/achordion/index.html#add-achordion-to-your-keymap
+  if (!process_achordion(keycode, record)) { return false; }
+
   switch (keycode) {
     case MAC_MISSION_CONTROL:
       HCS(0x29F);
@@ -115,9 +119,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
   }
+
   return true;
 }
 
+void housekeeping_task_user(void) {
+  achordion_task();
+}
 
 typedef struct {
     bool is_press_action;
