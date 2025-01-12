@@ -4,14 +4,16 @@
 */
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 205
+#define TAPPING_TERM 170
+
+#define PERMISSIVE_HOLD
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 190
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
 #define CAPS_LOCK_STATUS
-#define SERIAL_NUMBER "XgavB/0WwqZw"
+#define SERIAL_NUMBER "XgavB/lbZj4e"
 #define LAYER_STATE_8BIT
 #define HCS(report) host_consumer_send(record->event.pressed ? report : 0); return false
 
