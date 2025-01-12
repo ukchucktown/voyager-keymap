@@ -53,28 +53,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LT(2,KC_D):
-            return TAPPING_TERM -5;
-        case LT(1,KC_F):
-            return TAPPING_TERM -10;
         case KC_G:
-            return TAPPING_TERM -5;
-        case MT(MOD_LGUI, KC_V):
-            return TAPPING_TERM -10;
-        case MT(MOD_LSFT, KC_ESCAPE):
-            return TAPPING_TERM -15;
+            return TAPPING_TERM + 30;
         case KC_H:
-            return TAPPING_TERM -5;
-        case LT(1,KC_J):
-            return TAPPING_TERM -10;
-        case LT(2,KC_K):
-            return TAPPING_TERM -5;
-        case MT(MOD_RGUI, KC_M):
-            return TAPPING_TERM -10;
-        case MT(MOD_RSFT, KC_BSPC):
-            return TAPPING_TERM -15;
+            return TAPPING_TERM + 30;
         case TD(DANCE_0):
-            return TAPPING_TERM -5;
+            return TAPPING_TERM + 30;
         default:
             return TAPPING_TERM;
     }
