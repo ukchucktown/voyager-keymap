@@ -13,7 +13,7 @@
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
 #define CAPS_LOCK_STATUS
-#define SERIAL_NUMBER "XgavB/No5azB"
+#define SERIAL_NUMBER "XgavB/40pj93"
 #define LAYER_STATE_8BIT
 #define HCS(report) host_consumer_send(record->event.pressed ? report : 0); return false
 
